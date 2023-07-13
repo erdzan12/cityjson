@@ -1,7 +1,7 @@
 {
   "type": "CityJSONExtension",
   "name": "SolarIrradiation",
-  "url": "https://github.com/erdzan12/cityjson/blob/master/irradiation.ext.json",
+  "url": "https://github.com/erdzan12/cityjson/blob/main/irradiation.ext.json",
   "version": "1.0",
   "versionCityJSON": "1.1",
   "description": "Extension for Solar Irradiation on Roof Grids",
