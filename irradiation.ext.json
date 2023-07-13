@@ -1,0 +1,42 @@
+{
+  "type": "CityJSONExtension",
+  "name": "SolarIrradiation",
+  "url": "https://github.com/erdzan12/cityjson/blob/master/irradiation.ext.json",
+  "version": "1.0",
+  "versionCityJSON": "1.1",
+  "description": "Extension for Solar Irradiation on Roof Grids",
+  
+  "definitions": {
+    "gridCell": {
+      "type": "object",
+      "properties": {
+        "cellId": { "type": "integer" },
+        "irradiation": { "type": "number" },
+        "position": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" },
+            "z": { "type": "number" }
+          },
+          "required": ["x", "y", "z"]
+        }
+      },
+      "required": [ "cellId", "irradiation", "position" ],
+      "additionalProperties": false
+    }
+  },
+  
+  "extraRootProperties": {},
+  
+  "extraAttributes": {
+    "RoofSurface": {
+      "+solarGrid": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/gridCell" }
+      }
+    }
+  },
+  
+  "extraCityObjects": {}
+}
